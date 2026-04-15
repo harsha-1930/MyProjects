@@ -1,0 +1,6 @@
+data/ 
+pgsql/ 
+Thumbs.db 
+.DS_Store 
+*.swp 
+*.log
