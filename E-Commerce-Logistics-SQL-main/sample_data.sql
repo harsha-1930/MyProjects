@@ -20,15 +20,15 @@ VALUES ('SwiftCourier', 'contact@swiftcourier.com'),
 INSERT INTO shipments (partner_id, order_id, promised_date, actual_delivery_date, destination_city, status)
 VALUES 
 -- Delivered on time
-(1, 1, CURRENT_DATE - INTERVAL '5 days', CURRENT_DATE - INTERVAL '5 days', 'Hyderabad', 'delivered'),
+(1, 1, CURRENT_DATE - INTERVAL 5 DAY, CURRENT_DATE - INTERVAL 5 DAY, 'Hyderabad', 'delivered'),
 -- Delivered late
-(2, 2, CURRENT_DATE - INTERVAL '4 days', CURRENT_DATE - INTERVAL '2 days', 'Delhi', 'delivered'),
+(2, 2, CURRENT_DATE - INTERVAL 4 DAY, CURRENT_DATE - INTERVAL 2 DAY, 'Delhi', 'delivered'),
 -- Returned
-(3, 3, CURRENT_DATE - INTERVAL '3 days', CURRENT_DATE - INTERVAL '3 days', 'Mumbai', 'returned'),
+(3, 3, CURRENT_DATE - INTERVAL 3 DAY, CURRENT_DATE - INTERVAL 3 DAY, 'Mumbai', 'returned'),
 -- In transit
-(1, 2, CURRENT_DATE - INTERVAL '1 day', NULL, 'Chennai', 'in_transit'),
+(1, 2, CURRENT_DATE - INTERVAL 1 DAY, NULL, 'Chennai', 'in_transit'),
 -- Delivered late
-(2, 3, CURRENT_DATE - INTERVAL '10 days', CURRENT_DATE - INTERVAL '7 days', 'Bangalore', 'delivered');
+(2, 3, CURRENT_DATE - INTERVAL 10 DAY, CURRENT_DATE - INTERVAL 7 DAY, 'Bangalore', 'delivered');
 
 -- data of DeliveryLogs
 INSERT INTO deliverylogs (shipment_id, event)
