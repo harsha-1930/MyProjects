@@ -1,22 +1,22 @@
--- Customers
+--data of cus
 INSERT INTO customers (name, email, address)
 VALUES ('Harsha', 'harsha@example.com', 'Hyderabad'),
        ('Vardhan', 'vardhan@example.com', 'Delhi'),
        ('Seshu', 'seshu@example.com', 'Mumbai');
 
--- Orders
+-- data of ord
 INSERT INTO orders (customer_id, product, quantity, status)
 VALUES (1, 'Laptop', 1, 'shipped'),
        (2, 'Phone', 2, 'pending'),
        (3, 'Book', 5, 'shipped');
 
--- Partners
+-- data of par
 INSERT INTO partners (name, contact_email)
 VALUES ('SwiftCourier', 'contact@swiftcourier.com'),
        ('FastExpress', 'support@fastexpress.com'),
        ('ShipNow', 'info@shipnow.com');
 
--- Shipments
+-- data of ship
 INSERT INTO shipments (partner_id, order_id, promised_date, actual_delivery_date, destination_city, status)
 VALUES 
 -- Delivered on time
@@ -30,7 +30,7 @@ VALUES
 -- Delivered late
 (2, 3, CURRENT_DATE - INTERVAL '10 days', CURRENT_DATE - INTERVAL '7 days', 'Bangalore', 'delivered');
 
--- DeliveryLogs
+-- data of DeliveryLogs
 INSERT INTO deliverylogs (shipment_id, event)
 VALUES 
 (1, 'PickedUp'),
