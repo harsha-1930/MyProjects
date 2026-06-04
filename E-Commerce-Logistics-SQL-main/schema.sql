@@ -50,7 +50,7 @@ CREATE TABLE deliverylogs (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     shipment_id INT,
     log_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    event VARCHAR(50),
+    event VARCHAR(50) NOT NULL,
     FOREIGN KEY (shipment_id) REFERENCES shipments(shipment_id),
     CHECK (event IN ('PickedUp','InTransit','Delivered','Returned'))
 );
