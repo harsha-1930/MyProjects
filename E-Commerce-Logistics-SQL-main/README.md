@@ -1,156 +1,57 @@
-**SQL Project E-commerce Logistics.**
+# E-Commerce Logistics Tracking System
 
+## Overview
 
+A MySQL-based logistics tracking system built for a fictional logistics company, **SwiftShip**. The project helps identify delayed shipments, analyze delivery partner performance, and generate business insights through SQL queries.
 
-**Overview**
+## Database Design
 
+The project consists of five tables:
 
+* **Customers** – Customer information
+* **Orders** – Purchase details
+* **Partners** – Delivery partner information
+* **Shipments** – Shipment tracking data
+* **DeliveryLogs** – Shipment event history
 
-It is a simplified e-commerce logistics system based on the PostgreSQL and modeled as a project. It also has schema definitions, sample data and queries to give answers to the business case questions such as delayed shipments, partner performance, zone analysis and partner score-cards.
+## Project Files
 
+* **schema.sql** – Database schema and table creation
+* **sample_data.sql** – Sample data for testing
+* **queries.sql** – Business and analytical queries
 
+## Key Features
 
-**Project Files**
+* Track delayed shipments
+* Monitor delivery partner performance
+* Analyze destination city demand
+* Generate Partner Scorecard reports
+* Practice SQL concepts such as Joins, Aggregations, Constraints, and Conditional Aggregation
 
+## SQL Concepts Used
 
+* DDL & DML
+* Primary Keys & Foreign Keys
+* Constraints (NOT NULL, UNIQUE, CHECK)
+* JOINs
+* GROUP BY
+* Aggregate Functions (COUNT, SUM)
+* CASE Statements
+* Conditional Aggregation
 
-schema.sql: The database structure (table: customers, orders, partners, shipments, deliverylogs).
+## Business Reports
 
+* Pending Orders
+* Delivered Shipments
+* Delayed Shipments
+* Partner Performance Analysis
+* Most Popular Destination City
+* Partner Scorecard
 
+## Outcome
 
-sample\_data.sql: Inserts sample data in the database.
+The final Partner Scorecard ranks delivery partners based on delays and success rates, helping the business identify reliable and underperforming logistics partners.
 
-
-
-queries.SQL: SQL queries, which are applied in validation and business case analysis.
-
-
-
-**Setup Instructions**
-
-
-
-**Create the database**
-
-
-
-createdb swiftshipdb
-
-
-
-**Linkage to a database.**
-
-
-
-psql swiftshipdb user swiftshipdb
-
-
-
-**Run the schema file**
-
-
-
-\\i 'C:/Users/E-commerce logistics/schema.sql'
-
-
-
-**Insert sample data**
-
-
-
-\\i 'C:/Users/E-commerce logistics/sample\_data.sql'
-
-
-
-**Execute queries**
-
-
-
-\\i 'C:/Users/E-commerce logistics/queries.sql'
-
-
-
-**Queries Included**
-
-
-
-Validation Queries
-
-
-
-List all customers
-
-
-
-Shows all the pending orders.
-
-
-
-Find delivered shipments
-
-
-
-Number of total orders per customer.
-
-
-
-Place orders jointly with the customers.
-
-
-
-Business Case Queries
-
-
-
-Late Shipments: Identify those shipments that were late in comparison to the scheduled shipments.
-
-
-
-Performance of partners: Successful and returned deliveries by partner.
-
-
-
-Zone Filter: What is the most popular destination city in the last 30 days.
-
-
-
-Partner Scorecard: Rank the partners basing on the timeliness of the shipments and success rate.
-
-
-
-**Notes**
-
-
-
-Identify outputs with the help of use echo labels in queries.sql.
-
-
-
-Ensure that the orders should be entered before the shipments to prevent the errors of foreign key.
-
-
-
-TRUNCATE customers, orders, partners, shipments, deliverylogs RESTART IDENTITY CASCADE; in case you want to empty the database with prior restarting sample data.
-
-
-
-**Deliverables**
-
-
-
-schema.sql: Database structure.
-
-
-
-sample\_data.sql: Test dataset.
-
-
-
-queries.SQL: Query-based analytics with labelled results.
-
-
-
-README.md: Documentation and instructions (the file).
 
 
 
